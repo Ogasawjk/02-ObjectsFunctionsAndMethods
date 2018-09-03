@@ -3,12 +3,12 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and JUSTIN OGASAWARA.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -20,17 +20,27 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 
 import rosegraphics as rg
 
+import math
+
+def hypotenuse(side1,side2):
+
+    return (math.sqrt((side1**2)+side2**2))
 
 def main():
-    """
-    TESTS the functions that you will write below.
-    You write the tests per the _TODO_s below.
-    """
+
+   print(hypotenuse(3,4))
+   my_pen('blue', 10)
+
+
+   # """
+   # TESTS the functions that you will write below.
+   # You write the tests per the _TODO_s below.
+  #  """
 
 
 ###############################################################################
 #
-# TODO: 3a.  Define a function immediately blow this _TODO_.
+# DONE: 3a.  Define a function immediately blow this _TODO_.
 #   It takes two arguments that denote, for a right triangle,
 #   the lengths of the two sides adjacent to its right angle,
 #   and it returns the length of the hypotenuse of that triangle.
@@ -38,7 +48,7 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# DONE: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
@@ -46,7 +56,7 @@ def main():
 
 ###############################################################################
 #
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# DONE: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -68,15 +78,33 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# DONE: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
+def my_pen(wicky, thicky):
+
+# Input for wicky must be in single quotes
+# input for thicky  must be greater than zero
+
+    window = rg.TurtleWindow()
+    Biddy = rg.SimpleTurtle()
+    Diddy = rg.SimpleTurtle()
+    Biddy.pen = rg.Pen('green', thicky)
+    Diddy.pen = rg.Pen(wicky, 5)
+
+    Biddy.forward(100)
+    Diddy.backward(100)
+
+    window.close_on_mouse_click()
+
+
+
 
 
 ###############################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
