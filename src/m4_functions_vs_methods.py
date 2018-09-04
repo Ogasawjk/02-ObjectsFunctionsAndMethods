@@ -5,11 +5,12 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
          their colleagues and Vibha Alangar.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         JUSTIN OGASAWARA
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   With your instructor, READ the file   methods_vs_functions.txt
 #   in this project, ASKING QUESTIONS as needed to understand its contents.
 #   After you have done so, mark this _TODO_ as DONE
@@ -101,7 +102,7 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
 
 ###############################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   There are four FUNCTIONS defined ABOVE this:
 #     main
 #     run_example
@@ -128,22 +129,40 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
 ###############################################################################
 
 def try_methods():
-    """
-    Constructs a SimpleTurtle and sets its   pen   to a new rg.Pen
-    that is 'brown' with thickness 5.
-    Then makes the SimpleTurtle move as follows (in the order listed):
-      -- forward   150 units
-      -- left       90 degrees
-      -- forward    50 units
-      -- backward  100 units
-    """
+
+    bubby = rg.SimpleTurtle()
+    bubby.pen = rg.Pen('brown', 5)
+    bubby.forward(150)
+    bubby.left(90)
+    bubby.forward(50)
+    bubby.backward(100)
     ###########################################################################
-    # TODO: 3. Implement and test this function, per its doc-string above.
+    # DONE: 3. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     ###########################################################################
 
 
 def try_functions():
+
+    jumper1 = rg.SimpleTurtle()
+    jumper2 = rg.SimpleTurtle()
+    jumper3 = rg.SimpleTurtle()
+
+    jumper1.pen_up()
+    jumper1.go_to(rg.Point(200,100))
+    jumper1.pen_down()
+    jumper1.go_to(rg.Point(300,30))
+
+    jumper2.pen_up()
+    jumper2.go_to(rg.Point(100,200))
+    jumper2.pen_down()
+    jumper2.go_to(rg.Point(0,0))
+
+    jumper3.pen_up()
+    jumper3.go_to(rg.Point(-50,50))
+    jumper3.pen_down()
+    jumper3.go_to(rg.Point(100,100))
+
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
     """
     Causes several SimpleTurtles to do the following:
@@ -152,7 +171,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # DONE: 4. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #    NOTE: This function requires
@@ -164,6 +183,27 @@ def try_functions():
 
 def try_methods_and_functions():
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
+    Larry = rg.SimpleTurtle()
+    Larry.pen = rg.Pen('blue',5)
+
+    Larry.backward(150)
+    Larry.speed = 1
+    draw_many_squares(Larry,2,100,30)
+
+    Larry.speed = 5
+    Larry.pen = rg.Pen('red',5)
+    draw_many_squares(Larry,10,50,15)
+
+    Larry.speed = 100
+    Larry.pen = rg.Pen('red',35)
+    draw_many_squares(Larry,8,300,60)
+
+    Larry.pen = rg.Pen('black', 3)
+    Larry.backward(200)
+    Larry.draw_circle(30)
+    Larry.draw_square(50)
+
+
     """
     Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
     that is 'blue' with thickness 5.
@@ -196,7 +236,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # DONE: 5. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #   NOTE: This function should ** CALL ** the
